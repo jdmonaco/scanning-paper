@@ -1,0 +1,53 @@
+#!/usr/bin/env sh
+set -ue
+
+#
+# Scanr code runfile
+#
+
+USAGE="Usage: `basename ${0}` command"
+
+if [[ $# != 1 ]]
+then
+    echo $USAGE
+    exit 1
+fi
+
+case "$1" in
+
+created) cat ./.created ;;
+
+vim) vim scanr ;;
+
+mvim) mvim scanr ;;
+
+condareqs)
+    (
+    source activate scanr &&         conda list -e > conda-requirements.txt &&         git add conda-requirements.txt &&         git commit -q -m "Update Conda requirements file"
+    )
+    ;;
+
+ipython)
+    (
+    source activate scanr &&         ipython --profile=scanr
+    )
+    ;;
+
+notebook)
+    (
+    source activate scanr &&         jupyter notebook --notebook-dir="/Users/joe/projects/scanr/notebooks"
+    ) &
+    ;;
+
+killnb) pkill -f jupyter ;;
+
+finder) open . -a finder ;;
+
+tests) py.test -q tests ;;
+
+*)
+    echo $USAGE
+    exit 1
+    ;;
+
+esac
