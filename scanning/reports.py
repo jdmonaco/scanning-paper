@@ -22,7 +22,7 @@ from scanr.tracking import find_laps, get_tracking
 from scanr.meta import walk_days, get_day_list, get_start_end
 from scanr.data import session_list, get_node
 from .core.report import BaseReport
-from .tools.path import unique_path
+from scanr.tools.path import unique_path
 
 # Costants
 DEBUG = Config['debug_mode']

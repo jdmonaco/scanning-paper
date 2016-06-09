@@ -21,13 +21,13 @@ from scipy.interpolate import interp1d
 from scipy.signal import medfilt2d
 from scipy.stats import pearsonr
 from .core.analysis import AbstractAnalysis
-from .tools.images import tiling_dims, masked_array_to_rgba
-from .tools.plot import textlabel
-from .tools.stats import smooth_pdf, zscore
-from .tools.filters import smart_medfilt2d
-from .tools.interp import BilinearInterp2D, linear_upsample
-from .tools.string import snake2title
-from .tools.misc import unique_pairs
+from scanr.tools.images import tiling_dims, masked_array_to_rgba
+from scanr.tools.plot import textlabel
+from scanr.tools.stats import smooth_pdf, zscore
+from scanr.tools.filters import smart_medfilt2d
+from scanr.tools.interp import BilinearInterp2D, linear_upsample
+from scanr.tools.string import snake2title
+from scanr.tools.misc import unique_pairs
 
 # Package imports
 from scanr.lib import Config, flush_file
@@ -52,7 +52,7 @@ FILTER_BASE = 22
 def area_from_query(query):
     area_match = re.search("area=='(\w+)'", query)
     if area_match is None:
-        from .tools.bash import red
+        from scanr.tools.bash import red
         sys.stderr.write(red('Failed to parse area (\'%s\'), using UNK.\n'%
             self.result['query']))
         area = 'UNK'

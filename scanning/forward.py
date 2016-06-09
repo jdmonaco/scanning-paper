@@ -35,10 +35,10 @@ from scanr.cluster import (AND, get_min_quality_criterion,
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.plot import densitymap, quicktitle
-from .tools.misc import memoize, memoize_limited, DataSpreadsheet
-from .tools.string import snake2title
-from .tools.stats import KT_estimate2, t_one_sample
+from scanr.tools.plot import densitymap, quicktitle
+from scanr.tools.misc import memoize, memoize_limited, DataSpreadsheet
+from scanr.tools.string import snake2title
+from scanr.tools.stats import KT_estimate2, t_one_sample
 
 # Constants/defaults
 HALF_WINDOWS_DEFAULT = (5,10,15,20,25,35,45,90,180)

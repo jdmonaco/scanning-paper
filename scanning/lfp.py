@@ -25,9 +25,9 @@ from scanr.eeg import get_eeg_timeseries, get_filter
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.misc import Reify
-from .tools.plot import quicktitle, shaded_error
-from .tools.stats import KT_estimate, t_paired, zscore
+from scanr.tools.misc import Reify
+from scanr.tools.plot import quicktitle, shaded_error
+from scanr.tools.stats import KT_estimate, t_paired, zscore
 
 CfgBand = Config['band']
 from .scan_ripples import THETA_FREQ_SMOOTHING, THETA_POWER_SMOOTHING

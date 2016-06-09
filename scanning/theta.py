@@ -29,10 +29,10 @@ from scanr.eeg import get_eeg_timeseries, Theta, FullBand, total_power
 # Local imports
 from .core.analysis import AbstractAnalysis
 from .core.report import BaseReport
-from .tools.misc import Reify, AutoVivification
-from .tools.plot import quicktitle, shaded_error
-from .tools.stats import friedman_str, t_paired, zscore, CI
-from .tools.string import snake2title
+from scanr.tools.misc import Reify, AutoVivification
+from scanr.tools.plot import quicktitle, shaded_error
+from scanr.tools.stats import friedman_str, t_paired, zscore, CI
+from scanr.tools.string import snake2title
 
 
 class ScanCrossCorrelations(AbstractAnalysis):

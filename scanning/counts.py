@@ -21,8 +21,8 @@ from scanr.cluster import (SpatialInformationCriteria, SkaggsCriteria,
     PrincipalCellCriteria, get_min_quality_criterion,
     get_tetrode_restriction_criterion, AND, NOT)
 from scanr.spike import TetrodeSelect
-from .tools.bash import CPrint
-from .tools.misc import outer_pairs
+from scanr.tools.bash import CPrint
+from scanr.tools.misc import outer_pairs
 
 # Constants
 AREAS = { 'CA1':['all', 'proximal', 'intermediate', 'distal'], 'CA3':['all', 'a', 'b', 'c'] }

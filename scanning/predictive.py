@@ -33,11 +33,11 @@ from scanr.data import (get_unique_row, unique_values, unique_rats, unique_cells
 # Local imports
 from .core.analysis import AbstractAnalysis
 from .core.report import BaseReport
-from .tools.plot import AxesList, quicktitle, shaded_region, heatmap
-from .tools.misc import memoize
-from .tools.stats import (pvalue, CI, t_one_sample, bootstrap_array,
+from scanr.tools.plot import AxesList, quicktitle, shaded_region, heatmap
+from scanr.tools.misc import memoize
+from scanr.tools.stats import (pvalue, CI, t_one_sample, bootstrap_array,
     FDR_control, Interval)
-from .tools.radians import xy_to_deg, circle_diff
+from scanr.tools.radians import xy_to_deg, circle_diff
 
 # Hit window constants
 TimeInterval = namedtuple("Interval", "start end")

@@ -20,7 +20,7 @@ from scanr.time import time_slice_sample
 from scanr.tracking import TrajectoryData, plot_track_underlay
 from scanr.cluster import (AND, get_min_quality_criterion, get_tetrode_restriction_criterion,
     PrincipalCellCriteria)
-from .tools.radians import xy_to_deg_vec
+from scanr.tools.radians import xy_to_deg_vec
 
 # Plotting styles
 TRAJ_FMT = dict(ls='-', c='k', alpha=0.75, lw=0.5, aa=True, zorder=0)

@@ -25,9 +25,9 @@ from scanr.cluster import get_min_quality_criterion
 from scanr.field import mark_max_field, field_extent, cut_laps_opposite_field
 from scanr.time import select_from
 from .core.analysis import AbstractAnalysis
-from .tools.radians import xy_to_deg_vec
-from .tools.stats import integer_hist, SampleDistribution
-from .tools.plot import AxesList, textlabel, quicktitle
+from scanr.tools.radians import xy_to_deg_vec
+from scanr.tools.stats import integer_hist, SampleDistribution
+from scanr.tools.plot import AxesList, textlabel, quicktitle
 
 # Constants
 RATEMAP_BINS = 48

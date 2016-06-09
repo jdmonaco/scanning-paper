@@ -24,8 +24,8 @@ from .data_reports import TRAJ_FMT, SPIKE_FMT
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.interp import linear_upsample
-from .tools.plot import heatmap
+from scanr.tools.interp import linear_upsample
+from scanr.tools.plot import heatmap
 
 # Constants
 SCAN_PROJECT = "/Users/joe/Archives/Project-Archives/scan-potentiation-project"

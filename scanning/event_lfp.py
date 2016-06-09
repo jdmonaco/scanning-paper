@@ -28,9 +28,9 @@ from scanr.eeg import get_eeg_timeseries, Ripple, Theta
 # Local imports
 from .core.analysis import AbstractAnalysis
 from .core.report import BaseReport
-from .tools.misc import Reify
-from .tools.plot import quicktitle, grouped_bar_plot
-from .tools.stats import t_welch, t_one_tailed
+from scanr.tools.misc import Reify
+from scanr.tools.plot import quicktitle, grouped_bar_plot
+from scanr.tools.stats import t_welch, t_one_tailed
 
 # Table descriptions
 BehDescr =     {    'id'        :   tb.UInt16Col(pos=1),

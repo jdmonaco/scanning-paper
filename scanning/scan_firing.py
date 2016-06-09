@@ -27,9 +27,9 @@ from scanr.time import select_from
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.stats import zscore, t_one_tailed
-from .tools.plot import grouped_bar_plot
-from .tools.misc import DataSpreadsheet
+from scanr.tools.stats import zscore, t_one_tailed
+from scanr.tools.plot import grouped_bar_plot
+from scanr.tools.misc import DataSpreadsheet
 
 # Scan type labels
 AMBIG = Config['scanning']['amb_type']
@@ -859,8 +859,8 @@ class ECScanFiring(AbstractAnalysis, TetrodeSelect):
         """Create figure plotting distributions of scan-firing measures and
         compute various relevant statistics
         """
-        from .tools.stats import smooth_pdf, t_one_tailed
-        from .tools.string import snake2title
+        from scanr.tools.stats import smooth_pdf, t_one_tailed
+        from scanr.tools.string import snake2title
         from scipy.stats import (ttest_ind as ttest, t as t_dist, ks_2samp as kstest)
 
         os.chdir(self.datadir)

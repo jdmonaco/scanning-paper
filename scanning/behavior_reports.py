@@ -28,11 +28,11 @@ from scanr.time import time_slice, time_slice_sample
 from scanr.behavior import ScanPhasePoints
 from scanr.session import SessionData
 from .core.report import BaseReport
-from .tools.misc import DataSpreadsheet
-from .tools.radians import xy_to_rad_vec
-from .tools.stats import smooth_pdf, IQR
-from .tools.colormaps import diffmap
-from .tools.plot import quicktitle
+from scanr.tools.misc import DataSpreadsheet
+from scanr.tools.radians import xy_to_rad_vec
+from scanr.tools.stats import smooth_pdf, IQR
+from scanr.tools.colormaps import diffmap
+from scanr.tools.plot import quicktitle
 
 # Constants
 CfgData = Config['h5']

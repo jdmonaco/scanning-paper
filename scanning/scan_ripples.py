@@ -30,8 +30,8 @@ from scanr.behavior import ScanPoints, ScanPhases
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.plot import quicktitle, shaded_error
-from .tools.filters import quick_boxcar
+from scanr.tools.plot import quicktitle, shaded_error
+from scanr.tools.filters import quick_boxcar
 
 # Constants
 THETA_POWER_SMOOTHING = 0.050 # 50 ms

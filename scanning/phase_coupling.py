@@ -27,8 +27,8 @@ from scanr.eeg import (get_eeg_timeseries, phase_modulation_timeseries,
 
 # Local imports
 from .core.analysis import AbstractAnalysis
-from .tools.misc import Reify
-from .tools.plot import quicktitle, shaded_error
+from scanr.tools.misc import Reify
+from scanr.tools.plot import quicktitle, shaded_error
 
 # Constants
 CfgBand = Config['band']

@@ -22,10 +22,10 @@ import tables as tb
 # Package imports
 from scanr.lib import *
 from .core.analysis import AbstractAnalysis
-from .tools.stats import (t_one_sample, t_welch, t_paired, smooth_pdf, IQR,
+from scanr.tools.stats import (t_one_sample, t_welch, t_paired, smooth_pdf, IQR,
     oneway, oneway_str, friedman, friedman_str)
-from .tools.plot import quicktitle, grouped_bar_plot, AxesList
-from .tools.misc import AutoVivification
+from scanr.tools.plot import quicktitle, grouped_bar_plot, AxesList
+from scanr.tools.misc import AutoVivification
 
 # Constants
 CfgData = Config['h5']
@@ -1125,8 +1125,8 @@ class HeadScanStats(AbstractAnalysis):
         """Create figure plotting distributions of scan-firing measures and
         compute various relevant statistics
         """
-        from .tools.stats import smooth_pdf
-        from .tools.string import snake2title
+        from scanr.tools.stats import smooth_pdf
+        from scanr.tools.string import snake2title
         from scipy.stats import ttest_ind as ttest, ks_2samp as kstest, pearsonr
 
         os.chdir(self.datadir)

@@ -25,9 +25,9 @@ from scanr.cluster import (SpatialInformationCriteria, SkaggsCriteria, OlypherCr
     get_min_quality_criterion, get_tetrode_restriction_criterion, AND, NOT)
 from scanr.spike import TetrodeSelect
 
-from .tools.bash import CPrint, lightgreen
-from .tools.plot import heatmap, quicktitle, AxesList
-from .tools.misc import outer_pairs
+from scanr.tools.bash import CPrint, lightgreen
+from scanr.tools.plot import heatmap, quicktitle, AxesList
+from scanr.tools.misc import outer_pairs
 
 
 class InfoScoreData(TetrodeSelect):

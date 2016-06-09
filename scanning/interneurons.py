@@ -24,11 +24,11 @@ from scanr.spike import xcorr
 
 # Local imports
 from .core.analysis import AbstractAnalysis, ANA_DIR
-from .tools.misc import AutoVivification
-from .tools.string import snake2title
-from .tools.plot import quicktitle, shaded_error
-from .tools.colormaps import get_diffmap_for
-from .tools.path import unique_path
+from scanr.tools.misc import AutoVivification
+from scanr.tools.string import snake2title
+from scanr.tools.plot import quicktitle, shaded_error
+from scanr.tools.colormaps import get_diffmap_for
+from scanr.tools.path import unique_path
 
 
 class ScanInterneuronCorrelation(AbstractAnalysis):

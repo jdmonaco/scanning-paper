@@ -17,7 +17,7 @@ from scanr.time import time_slice
 from scanr.eeg import get_eeg_timeseries
 
 from .core.report import BaseReport
-from .tools.plot import quicktitle
+from scanr.tools.plot import quicktitle
 
 
 class RippleReport(BaseReport):

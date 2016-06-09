@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from scanr.lib import *
 from .firing_modulation import get_bin_edges, display_modulation, GainFunction
 from .core.analysis import AbstractAnalysis
-from .tools.interp import linear_upsample
+from scanr.tools.interp import linear_upsample
 
 # Constants
 CfgScan = Config['scanning']

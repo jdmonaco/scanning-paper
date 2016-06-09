@@ -20,7 +20,7 @@ from scanr.ripples import find_pyramidale_tetrodes
 from scanr.chewing import ChewingFilter
 
 from .core.report import BaseReport
-from .tools.plot import quicktitle
+from scanr.tools.plot import quicktitle
 
 
 class ChewingReport(BaseReport):

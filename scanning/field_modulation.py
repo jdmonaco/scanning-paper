@@ -39,14 +39,14 @@ from .data_reports import TRAJ_FMT, SPIKE_FMT
 # Local imports
 from .core.analysis import AbstractAnalysis
 from .core.report import BaseReport
-from .tools.radians import (xy_to_rad_vec, xy_to_deg_vec, get_angle_array,
+from scanr.tools.radians import (xy_to_rad_vec, xy_to_deg_vec, get_angle_array,
     circle_diff_vec_deg, circle_diff_vec, unwrap_deg, rot2D_vec)
-from .tools.plot import grouped_bar_plot, AxesList, quicktitle, textlabel
-from .tools.misc import Reify, DataSpreadsheet, contiguous_groups
-from .tools.images import masked_array_to_rgba, rgba_to_image, array_to_image
-from .tools.stats import zscore, sem, pvalue
-from .tools.string import snake2title
-from .tools import circstat
+from scanr.tools.plot import grouped_bar_plot, AxesList, quicktitle, textlabel
+from scanr.tools.misc import Reify, DataSpreadsheet, contiguous_groups
+from scanr.tools.images import masked_array_to_rgba, rgba_to_image, array_to_image
+from scanr.tools.stats import zscore, sem, pvalue
+from scanr.tools.string import snake2title
+from scanr.tools import circstat
 
 # Traits imports
 from traits.api import HasTraits, Int, Float, List, Bool, Instance, Range

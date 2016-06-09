@@ -20,7 +20,7 @@ from scanr.spike import HippocampalAreas, TetrodeSelect
 from scanr.cluster import (AND, get_min_quality_criterion, PlaceCellCriteria,
     get_tetrode_restriction_criterion)
 from .reports import BaseDatasetReport
-from .tools.radians import xy_to_rad_vec
+from scanr.tools.radians import xy_to_rad_vec
 
 
 def process_area_argument(area):

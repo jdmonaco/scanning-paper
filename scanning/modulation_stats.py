@@ -23,8 +23,8 @@ from scanr.lib import *
 from scanr.cluster import get_min_quality_criterion
 from .core.analysis import AbstractAnalysis
 from scanr.field import mark_all_fields
-from .tools.stats import t_one_sample, t_welch, CI
-from .tools.string import snake2title
+from scanr.tools.stats import t_one_sample, t_welch, CI
+from scanr.tools.string import snake2title
 import tools.stats as stat
 
 # Table descriptions
