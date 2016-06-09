@@ -11,14 +11,14 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='scanr',
     version='0.1.0',
-    description='Attentive Head Scanning',
+    description='Attentive Head Scanning Analysis',
     long_description=long_description,
     url='https://github.com/jdmonaco/scanr',
     author='Joseph Monaco',
     author_email='jmonaco@jhu.edu',
     license='MIT',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Science/Research',
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
@@ -27,4 +27,4 @@ setup(
         'Programming Language :: Python :: 3.4'
     ],
     keywords='model simulation neuroscience',
-    packages=['scanr'])
+    packages=['scanr', 'scanning'])
