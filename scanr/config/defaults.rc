@@ -1,0 +1,147 @@
+#
+# Configuration file for SCANR data analysis tools
+#
+
+data_root = string
+debug_mode = boolean(default=true)
+
+# Neuralynx file information
+#
+[file_format]
+nlx_hdr_size = integer(default=16384)
+ncs_data_points = integer(default=512)
+event_str_len = integer(default=128)
+pos_hdr_rows = integer(default=24)
+
+# File system structure of data set (based at data_root)
+#
+# Interpolation requires dictionary with necessary keys: 
+#     {'rat':R, 'day':D, 'session':S, 'tetrode':T, 'cluster':C}
+#
+[path]
+experiment_file = string(default='experiment.yaml')
+location_file = string(default='location.yaml')
+addins_file = string(default='addins.yaml')
+timing_file = string(default='timing.yaml')
+master_file = string(default='master.yaml')
+data_file = string(default='kdata.h5')
+eeg_file = string(default='eeg.h5')
+subject_dir = string(default='Rat%(rat)d')
+session_dir = string(default='rat%(rat)d-%(day)02d')
+center_file = string(default='CenterCoords.m%(session)d')
+events_file = string(default='Events.Nev')
+tracking_file = string(default='Pos.p.ascii')
+continuous_file = string(default='CSC%(tetrode)d.Ncs')
+tetrode_dir = string(default='Sc%(tetrode)d')
+cluster_glob = string(default='[hrc]*l-maze%(session)d.*')
+cluster_file = string(default='cl-maze%(session)d.%(cluster)d')
+spiketrain_glob = string(default='*[xgt]*[!-]maze%(session)d.*')
+spiketrain_file = string(default='tmaze%(session)d.%(cluster)d')
+clnotes_file = string(default='ClNotes')
+
+# H5 groups, tables, and nodes
+#
+[h5]
+behavior_tree = string(default='/behavior')
+scan_table = string(default='scans')
+pause_table = string(default='pauses')
+meta_tree = string(default='/metadata')
+ec_cluster_table = string(default='ec_clusters')
+tetrode_table = string(default='tetrodes')
+session_table = string(default='sessions')
+physio_tree = string(default='/physiology')
+ripple_table = string(default='ripples')
+kdata_tree = string(default='/kdata')
+rat = string(default='rat%(rat)03d')
+day = string(default='day%(day)02d')
+session = string(default='m%(session)d')
+
+# Head scan event parameters
+#
+[scanning]
+lp_time = float(default=0.125)
+min_time = float(default=0.4)
+max_time = float(default=45.0)
+max_angle = integer(default=45)
+min_rad = float(default=2.5)
+in_type = string(default='INT')
+out_type = string(default='EXT')
+amb_type = string(default='AMB')
+
+# Pause event parameters
+#
+[pauses]
+min_time = float(default=0.4)
+max_fwd_speed = float(default=10.0) # CW degs/s
+max_speed = float(default=5.0) # cm/s
+
+# Behavioral modulation parameters
+#
+[modulation]
+group_path = string(default='/behavior/modulation')
+bins = integer(default=49)
+fwd_speed_min = integer(default=-200)
+fwd_speed_max = integer(default=200)
+hd_speed_min = integer(default=-800)
+hd_speed_max = integer(default=800)
+hd_min = integer(default=-180)
+hd_max = integer(default=180)
+rad_speed_min = integer(default=-50)
+rad_speed_max = integer(default=50)
+radius_min = integer(default=-20)
+radius_max = integer(default=20)
+alpha_min = integer(default=0)
+alpha_max = integer(default=360)
+
+# Sampling rates for data in Hz (samples per second)
+#
+[sample_rate]
+time = float(default=1e6)
+spikes = float(default=32000.0)
+eeg = float(default=1001.0)
+
+# Position tracking and track parameters
+#
+[track]
+baseline_hd = float(default=25.0)
+invalid_sample = integer(default=-99)
+boxcar_kernel = integer(default=4)
+diameter = float(default=66.0)
+inner_diameter = float(default=56.0)
+outer_diameter = float(default=76.0)
+
+# LFP frequency bands
+#
+[band]
+full = int_list(min=2, max=2, default=list(1, 50))
+delta = int_list(min=2, max=2, default=list(1, 4))
+theta = int_list(min=2, max=2, default=list(5, 12))
+ripple = int_list(min=2, max=2, default=list(180, 250))
+gamma = int_list(min=2, max=2, default=list(40, 100))
+slow_gamma = int_list(min=2, max=2, default=list(25, 50))
+fast_gamma = int_list(min=2, max=2, default=list(65, 140))
+power_window = float(min=0, default=0.01)
+
+# Spatial firing-rate responses
+#
+[ratemap]
+min_velocity = float(default=10.0)
+min_speed = float(default=4.0)
+gaussian_blur = float(min=0, default=4.3)
+bins = integer(min=10, default=360)
+
+# Place field criteria and delineation
+#
+[placefield]
+min_positional_info = float(default=0.4)
+min_skaggs_info = float(default=1.0)
+info_significance = float(min=0, max=1, default=0.01)
+min_spike_count = float(default=30)
+min_peak_rate = float(min=0, default=1.5)
+min_size_degrees = float(min=0, default=60)
+max_size_degrees = float(min=10, default=210)
+default_bins = integer(min=0, max=360, default=48)
+floor_fraction = float(min=0.0, default=0.125)
+kill_after = integer(min=0, default=2)
+
+# EOF
