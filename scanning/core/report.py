@@ -22,8 +22,8 @@ from traits.api import (Directory, Bool, Int, Float, List, String,
 
 # Package imports
 from .analysis import AbstractAnalysis
-from ..tools.path import unique_path
-from ..tools.string import snake2title
+from scanr.tools.path import unique_path
+from scanr.tools.string import snake2title
 
 
 class BaseReport(AbstractAnalysis):

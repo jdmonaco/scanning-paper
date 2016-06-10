@@ -50,9 +50,9 @@ with warnings.catch_warnings():
 
 # Package imports
 from . import ANA_DIR
-from ..tools.bash import CPrint
-from ..tools.path import unique_path
-from ..tools.string import snake2title
+from scanr.tools.bash import CPrint
+from scanr.tools.path import unique_path
+from scanr.tools.string import snake2title
 
 # Constants
 PICKLE_FILE_NAME = 'analysis.pickle'
