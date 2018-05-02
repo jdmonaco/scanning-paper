@@ -19,7 +19,9 @@ More information and links to the article online can be found [on my website](ht
 
 ## Directories
 
-The main code is in the `scanr` subdirectory. For instance, the detection of head scanning events is handled by the `BehaviorDetector` class in `scanr.behavior`.
+Common library code is in the `scanr` subdirectory. For instance, the detection of head scanning events is handled by the `BehaviorDetector` class in the `scanr.behavior` module.
+
+The analysis and reporting code is in the `scanning` subdirectory. For instance, the predictive value (scan-potentiation index or SPI) analyses from the paper were computed using the methods of the `PredictiveValueAnalysis` class in the `scanning.predictive` module.
 
 * `scanr/`: common library modules used for the analysis
     * `config/`: parameter configuration handling and defaults (in `defaults.rc`)
